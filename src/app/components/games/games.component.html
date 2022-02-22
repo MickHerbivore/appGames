@@ -1,0 +1,23 @@
+<div class="row justify-content-center g-4">
+
+    <div class="col-md-10">
+        <div class="row">
+            <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"> -->
+            <div class="col-xl-3 col-md-5 col-sm-6 g-4" *ngFor="let game of games; let i = index">
+                <app-card [item]="game" [index]="i" (agregarEvent)="agregarAlCarrito($event)" (eliminarEvent)="getGames()">
+                </app-card>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Carrito</h1>
+
+    <div *ngIf="carritoItems.length > 0">
+        <app-carrito [items]="carritoItems" (deleteEvent)="deleteElement($event)"></app-carrito>
+    </div>
+
+    <p *ngIf="carritoItems.length == 0" class="col-md-8 fs-4">No hay elementos en el carrito.</p>
+</div>

@@ -1,0 +1,41 @@
+<h2>Editar Juego</h2>
+<hr>
+<form autocomplete="off" [formGroup]="formulario" (ngSubmit)="actualizar()">
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Título</label>
+        <div class="col-8">
+            <input type="text" name="titulo" placeholder="Titulo" formControlName="titulo">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Descripción</label>
+        <div class="col-8">
+            <input type="text" name="descripcion" placeholder="Descripción" formControlName="descripcion">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Plataforma</label>
+        <div class="col-8">
+            <input type="text" name="plataforma" placeholder="Plataforma" formControlName="plataforma">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Imagen</label>
+        <div class="col-8">
+            <input type="email" name="imagen" placeholder="Imagen" formControlName="imagen">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">&nbsp;</label>
+        <div class="input-group col">
+            <a class="btn btn-outline-primary btn-block" [routerLink]="['/games']"> Volver</a>
+            <button type="submit" class="btn btn-outline-primary btn-block">
+                Actualizar
+            </button>
+        </div>
+    </div>
+
+</form>

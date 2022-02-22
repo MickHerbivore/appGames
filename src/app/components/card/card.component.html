@@ -1,0 +1,13 @@
+<div class="card text-center" style="width: 18rem;">
+    <img src="{{ item.img }}" class="card-img-top img-fluid" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="card-text">{{ item.description }}</p>
+        <p class="card-text">{{ item.platform }}</p>
+        <div class="d-grid gap-2 col-10 mx-auto">
+            <a (click)="detailGame()" class="btn btn-info">Ver Detalle</a>
+            <a (click)="agregarAlCarrito()" class="btn btn-success">Agregar al carrito</a>
+            <a (click)="eliminar()" class="btn btn-danger">Eliminar</a>
+        </div>
+    </div>
+</div>
